@@ -1,18 +1,15 @@
-
-    //Array of dogs
-    var dogs = ["whippet", "hound", "poodle"];
-    
-    function displayDogs() {
-        var dog = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/random?apikey=OnQNcaPWc6SivsEki6eVSFfsaIO0z4Nl&tag=" + dog;
-        console.log(queryURL);
+//Array of dogs
+/*var dogs = ["whippet", "hound", "poodle"];
+function displayDogs() {
+    var dog = $(this).attr("data-name");
+    var queryURL = "https://api.giphy.com/v1/gifs/random?apikey=OnQNcaPWc6SivsEki6eVSFfsaIO0z4Nl&tag=" + dog;
         // Ajax call for each button
-        $.ajax({
+    $.ajax({
             url: queryURL, 
             method: "GET"
-        })
-        .then(function(response) {
-            var dogDiv = $("<div class='dog'>");
+    })
+    .then(function(response) {
+        var dogDiv = $("<div class='dog'>");
             //var rating = response.rating;
             //var ratingDisplay = $("<p>").text("Rating:" + rating);
             //dogDiv.append(ratingDisplay);
@@ -41,4 +38,6 @@ $("#addDog").on("click", function(event) {
 });
 $("document").on("click", ".dogButton", displayDogs);
 renderButtons();
+displayDogs();*/
+
 
