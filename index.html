@@ -49,12 +49,12 @@
     <div id="buttons-view"></div>
 
     <form id="dog-form">
-      <label for="dog-input">Add a Dog Bro</label>
+      <label for="dog-input">Add a Dog!</label>
       <input type="text" id="dog-input">
       <br>
 
       <!-- Button triggers new dog to be added -->
-      <input id="add-dog" type="submit" value="Add a Dog Bro">
+      <input id="add-dog" type="submit" value="Add a Dog!">
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -64,29 +64,38 @@
 
       // displaydogInfo function re-renders the HTML to display the appropriate content
       function displayDogs() {
+        $(".dog").empty();
 
         var dog = $(this).attr("data-name");
-        var queryURL = "https://api.giphy.com/v1/gifs/random?apikey=OnQNcaPWc6SivsEki6eVSFfsaIO0z4Nl&tag=" + dog;
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + dog + "&apikey=OnQNcaPWc6SivsEki6eVSFfsaIO0z4Nl";
+        //var queryURL = "https://api.giphy.com/v1/gifs/random?apikey=OnQNcaPWc6SivsEki6eVSFfsaIO0z4Nl&tag=" + dog;
+        console.log(queryURL);
 
         // Creating an AJAX call for the specific dog button being clicked
         $.ajax({
           url: queryURL,
           method: "GET"
         }).then(function(response) {
+          for (var i = 0; i < 9; i++)
           var dogDiv = $("<div class='dog'>");
 
           // Storing the rating data
-          var rating = response.data.rating.val();
+          //need to loop through 10 times
+          var rating = response.data[i].rating;
 
           // Creating an element to have the rating displayed
           var displayRating = $("<p>").text("Rating: " + rating);
 
           // Displaying the rating
           dogDiv.append(displayRating);
-          var imgURL = response.data.image_original_url;
+          
+
+          var imgURL = response.data[i].images.original.url;
+          console.log(imgURL);
           var image = $("<img>").attr("src", imgURL);
+          $("<img>").attr("class", "gif");
           dogDiv.append(image);
-          $("#dogs-view").prepend(dogDiv);
+          $("#dogs-view").prepend(dogDiv); 
         });
 
       }
@@ -109,11 +118,21 @@
         renderButtons();
       });
 
-      // Adding a click event listener to all elements with a class of "movie-btn"
       $(document).on("click", ".dog-btn", displayDogs);
-
-      // Calling the renderButtons function to display the intial buttons
       renderButtons();
+
+      $(".gif").on("click", function() {
+
+      var state = $("img").attr("data-state");
+      if (state === "still") {
+        $("img").attr("src", $(this).attr("data-animate"));
+        $("img").attr("data-state", "animate");
+      } else {
+        $("img").attr("src", $(this).attr("data-still"));
+        $("img").attr("data-state", "still");
+      }
+    });
+
     </script>
   </div>
 </body>
