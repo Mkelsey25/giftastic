@@ -25,30 +25,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Dogs!</title>
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <meta charset="utf-8">
+    <title>Dogs!</title>
 </head>
 
 <body>
 
   <div class="container">
-    <h1>Dog Search</h1>
+    <div class="jumbotron text-center"> 
+        <h1>Dog Search</h1>
+        <img src="assets/images/nova-sticker.png">
+    </div>
+    <div class="row">
+        <div id="buttons-view" class="text-center"></div>
+    </div>
+    <div class="row">
+        <form id="dog-form" class="text-center">
+          <br>
+            <label for="dog-input">Add a Dog!</label>
+            <input type="text" id="dog-input">
+            <input id="add-dog" type="submit" value="Add a Dog!">
+        </form>
+    </div>
+    <div class="row">
+        <div id="dogs-view"></div>
+    </div>
+    
 
 
     
 
 
-    <div id="buttons-view"></div>
+    
 
-    <form id="dog-form">
-      <label for="dog-input">Add a Dog!</label>
-      <input type="text" id="dog-input">
-      <br>
 
-      <!-- Button triggers new dog gif to be added -->
-      <input id="add-dog" type="submit" value="Add a Dog!">
-    </form>
-    <div id="dogs-view"></div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/giftastic.js">
