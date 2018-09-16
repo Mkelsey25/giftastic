@@ -17,14 +17,14 @@ $("document").ready(function() {
       }).then(function(response) {
         console.log(response.data);
         for (var i = 0; i < response.data.length; i++){
-          var dogDiv = $("<div class='dog'>");
+          var dogDiv = $("<div class='dog col-md-3 text-center'>");
 
           // Storing the rating data
           //need to loop through 10 times
           var rating = response.data[i].rating;
 
           // Creating an element to have the rating displayed
-          var displayRating = $("<p>").text("Rating: " + rating);
+          var displayRating = $("<h5>").text("Rating: " + rating);
 
           // Displaying the rating
           dogDiv.append(displayRating);

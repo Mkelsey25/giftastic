@@ -10,3 +10,11 @@ margin: 1% !important;
 background-color: black !important;
 color: white !important;
 }
+h5 {
+    font-size: 3rem !important;
+    text-shadow: 1px 1px white;
+    color: #DADD8F !important;
+}
+.gif {
+    margin: 1%;
+}
