@@ -1,6 +1,6 @@
 $("document").ready(function() {
     // Initial array of dogs
-    var dogs = ["whippet", "hound", "spaniel", "collie"];
+    var dogs = ["Whippet", "Hound", "Spaniel", "Collie"];
 
     // displaydogInfo function re-renders the HTML to display the appropriate content
     function displayDogs() {
@@ -51,6 +51,7 @@ $("document").ready(function() {
       for (var i = 0; i < dogs.length; i++) {
         var doggy = $("<button>");
         doggy.addClass("dog-btn");
+        doggy.addClass("btn btn-light");
         doggy.attr("data-name", dogs[i]);
         doggy.text(dogs[i]);
         $("#buttons-view").append(doggy);

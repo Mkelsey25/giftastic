@@ -1,5 +1,12 @@
-.container {
+.container-fluid {
     background-image: url(../images/nova-sticker.png);
     height: 3000px;
-    width: 3000px;
+}
+.jumbotron{
+    background-color: #DADD8F !important;
+}
+.btn{
+margin: 1% !important;
+background-color: black !important;
+color: white !important;
 }

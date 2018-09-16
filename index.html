@@ -1,52 +1,33 @@
-<!--<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <title>Giftastic: Dogs</title>
-
-</head>
-<body>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="assets/giftastic.js"></script>
-        <div class="dogButtons"></div>
-            <div class="dogGifs"></div>
-<form id="dogForm">
-    <label for="dogInput">Add a dog!</label>
-        <input type="text" id="dogInput">
-        <input id="addDog" type="submit" value="Add a dog breed!"> 
-</form>
-</body>
-</html>-->
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <meta charset="utf-8">
     <title>Dogs!</title>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="container-fluid">
     <div class="jumbotron text-center"> 
-        <h1>Dog Search</h1>
-    </div>
-    <div class="row">
-        <div id="buttons-view" class="text-center"></div>
-    </div>
-    <div class="row">
+        <h1>Dog Search <i class="fas fa-paw"></i></h1>
+        
         <form id="dog-form" class="text-center">
-          <br>
-            <label for="dog-input">Add a Dog!</label>
-            <input type="text" id="dog-input">
-            <input id="add-dog" type="submit" value="Add a Dog!">
-        </form>
+            <br>
+              
+              <input type="text" id="dog-input">
+              <button id="add-dog" type="button" class="btn btn-light">Add a Dog!</button>
+          </form>
+          <div id="buttons-view" class="text-center"></div>
+    </div>
+    <div class="row">
+        
+    </div>
+    <div class="row">
+        
     </div>
     <div class="row">
         <div id="dogs-view"></div>
