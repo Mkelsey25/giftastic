@@ -17,7 +17,7 @@ $("document").ready(function() {
       }).then(function(response) {
         console.log(response.data);
         for (var i = 0; i < response.data.length; i++){
-          var dogDiv = $("<div class='dog col-md-3 text-center'>");
+          var dogDiv = $("<div class='dog col-md-4 text-center'>");
 
           // Storing the rating data
           //need to loop through 10 times
